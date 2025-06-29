@@ -6,8 +6,8 @@ from selenium.webdriver.edge.service import Service
 from selenium.webdriver.common.by import By
 
 # 配置参数
-DESKTOP_SEARCH_TIMES = 30  # 桌面端搜索次数
-MOBILE_SEARCH_TIMES = 20   # 移动端搜索次数
+DESKTOP_SEARCH_TIMES = 60  # 桌面端搜索次数
+MOBILE_SEARCH_TIMES = 40   # 移动端搜索次数
 WAIT_TIME_MIN = 2          # 每次搜索后等待的最短时间（秒）
 WAIT_TIME_MAX = 6          # 每次搜索后等待的最长时间（秒）
 
@@ -182,6 +182,7 @@ def main():
     # 显示总结
     print(f"\n桌面端搜索总结：成功搜索 {desktop_success} 次")
     print(f"移动设备搜索总结：成功搜索 {mobile_success} 次")
+    print("查看Rewards积分：https://rewards.bing.com/redeem")
 
 if __name__ == "__main__":
     main()
