@@ -12,6 +12,6 @@ Edge浏览器自动领取Rewards Search积分
 
 `git clone https://github.com/yuexps/edge-rewards.git`
 
-2.运行main.py
+2.运行`main.py`
 
 (或使用一键启动脚本`start.cmd`)
