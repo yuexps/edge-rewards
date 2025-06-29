@@ -89,7 +89,6 @@ KEYWORDS = [
 # 桌面端浏览器配置
 def get_desktop_driver():
     """获取桌面端配置好的 WebDriver 实例"""
-    service = Service(executable_path='./msedgedriver.exe')
     options = webdriver.EdgeOptions()
     options.add_argument("--start-maximized")
     options.add_argument("--disable-blink-features=AutomationControlled")
@@ -98,12 +97,11 @@ def get_desktop_driver():
     options.add_argument("--disable-gpu")  # 禁用GPU加速
     options.add_argument("--disable-popup-blocking")
     options.add_argument("--disable-notifications")
-    return webdriver.Edge(service=service, options=options)
+    return webdriver.Edge(options=options)
 
 # 移动端浏览器配置
 def get_mobile_driver():
     """获取移动端配置好的 WebDriver 实例"""
-    service = Service(executable_path='./msedgedriver.exe')
     options = webdriver.EdgeOptions()
     options.add_argument("--disable-blink-features=AutomationControlled")
     options.add_argument("--incognito")  # 无痕模式
@@ -115,7 +113,7 @@ def get_mobile_driver():
     options.add_experimental_option("mobileEmulation", {
         "deviceName": "Nexus 5X"
     })
-    return webdriver.Edge(service=service, options=options)
+    return webdriver.Edge(options=options)
 
 # 执行单次搜索
 def perform_search(driver, keyword):
